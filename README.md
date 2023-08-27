@@ -1,6 +1,6 @@
 # Snacks - React Native
 
-<h1>💻 Pequenas aplicações utilizadas no estudo de React Native. </h1>
+<h1>💻 Pequenas aplicações utilizadas no estudo/testes com React Native. </h1>
 <br>
 <br>
 <h3>
