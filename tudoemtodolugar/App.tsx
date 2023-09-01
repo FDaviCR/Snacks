@@ -1,16 +1,16 @@
 import React, {useState} from 'react';
 import { Text, SafeAreaView, StyleSheet, Button } from 'react-native';
 
-// import { Card } from 'react-native-paper';
+import { Card } from 'react-native-paper';
 
 export default function App() {
   const [name, setName] = useState('Test');
-  let age: number = 33;
 
   return (
     <SafeAreaView style={styles.container}>
+      
       <Text style={styles.paragraph}>
-        {name}
+          {name}
       </Text>
 
       <Button title="Test 2" onPress={() => setName("Test 2")}/>
@@ -22,6 +22,9 @@ export default function App() {
       <Button title="Test 5" onPress={() => setName("Test 5")}/>
       
       <Button title="Test 6" onPress={() => setName("Test 6")}/>
+
+      { name != "" && <Button title='Limpar' onPress={() => setName("")}/> }
+      
     </SafeAreaView>
   );
 }
@@ -35,7 +38,7 @@ const styles = StyleSheet.create({
   },
   paragraph: {
     margin: 24,
-    fontSize: 18,
+    fontSize: 25,
     fontWeight: 'bold',
     textAlign: 'center',
   },
