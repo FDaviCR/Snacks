@@ -1,31 +1,39 @@
 import React, {useState} from 'react';
-import { Text, SafeAreaView, StyleSheet, Button } from 'react-native';
+import { Text, View, StyleSheet, Button , TextInput} from 'react-native';
 
 import { Card } from 'react-native-paper';
 
 export default function App() {
   const [name, setName] = useState('Test');
+  const [nameField, setNameField] = useState('');
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       
+      <TextInput
+        style={styles.input}
+        placeholder='Digite aqui...'
+        placeholderTextColor="#000000"
+        value={nameField}
+        onChangeText={text => setNameField(text)}
+      />
       <Text style={styles.paragraph}>
-          {name}
+          {nameField}
       </Text>
 
-      <Button title="Test 2" onPress={() => setName("Test 2")}/>
+      <Button title="Test 2" onPress={() => setNameField("Test 2")}/>
       
-      <Button title="Test 3" onPress={() => setName("Test 3")}/>
+      <Button title="Test 3" onPress={() => setNameField("Test 3")}/>
       
-      <Button title="Test 4" onPress={() => setName("Test 4")}/>
+      <Button title="Test 4" onPress={() => setNameField("Test 4")}/>
       
-      <Button title="Test 5" onPress={() => setName("Test 5")}/>
+      <Button title="Test 5" onPress={() => setNameField("Test 5")}/>
       
-      <Button title="Test 6" onPress={() => setName("Test 6")}/>
+      <Button title="Test 6" onPress={() => setNameField("Test 6")}/>
 
-      { name != "" && <Button title='Limpar' onPress={() => setName("")}/> }
+      { nameField != "" && <Button title='Limpar' onPress={() => setNameField("")}/> }
       
-    </SafeAreaView>
+    </View>
   );
 }
 
@@ -42,4 +50,11 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
   },
+  button:{
+    margin: 10
+  },
+  input:{
+    backgroundColor: '#999',
+    padding: 10,
+  }
 });
