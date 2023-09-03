@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import { Text, View, StyleSheet, Button , TextInput} from 'react-native';
 
-import { Card } from 'react-native-paper';
+import Name from './components/Name';
+// import { Card } from 'react-native-paper';
 
 export default function App() {
   const [name, setName] = useState('Test');
@@ -9,18 +10,10 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      
-      <TextInput
-        style={styles.input}
-        placeholder='Digite aqui...'
-        placeholderTextColor="#000000"
-        value={nameField}
-        onChangeText={text => setNameField(text)}
-      />
       <Text style={styles.paragraph}>
           {nameField}
       </Text>
-
+      <Name/>
       <Button title="Test 2" onPress={() => setNameField("Test 2")}/>
       
       <Button title="Test 3" onPress={() => setNameField("Test 3")}/>
