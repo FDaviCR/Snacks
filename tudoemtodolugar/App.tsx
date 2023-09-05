@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Text, View, StyleSheet, Button , TextInput} from 'react-native';
 
-import Name from './components/Name';
+import { Name } from './components/Name';
 // import { Card } from 'react-native-paper';
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
       <Text style={styles.paragraph}>
           {nameField}
       </Text>
-      <Name/>
+      <Name name={'Test'}/>
       <Button title="Test 2" onPress={() => setNameField("Test 2")}/>
       
       <Button title="Test 3" onPress={() => setNameField("Test 3")}/>
